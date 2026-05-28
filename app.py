@@ -5,8 +5,7 @@ from PIL import Image
 # =====================================================================
 # 1. KONFIGURASI AI (API KEY SUDAH DIMASUKKAN)
 # =====================================================================
-API_KEY = "AIzaSyBNZkZQgXooXl6j1UCnaCzhK8imhsuzbbU"
-genai.configure(api_key=API_KEY)
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 # Mengatur konfigurasi halaman utama aplikasi (Tampilan HP & Desktop)
 st.set_page_config(page_title="AgriCheck & Konsultasi AI", page_icon="🌱", layout="centered")
