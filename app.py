@@ -50,7 +50,7 @@ if pilihan_menu == "📸 Deteksi Penyakit Tanaman":
         if st.button("🔍 Analisis Penyakit Sekarang"):
             with st.spinner("Dokter AI sedang menganalisis gejala pada daun... Mohon tunggu..."):
                 try:
-                    model = genai.GenerativeModel('gemini-2.0-flash')
+                    model = genai.GenerativeModel('gemini-2.0-pro')
                     prompt_instruksi = """
                     Bertindaklah sebagai Ahli Agronomi dan Patologi Tanaman berpengalaman. 
                     Analisis gambar tanaman yang sakit ini dengan sangat teliti dan berikan laporan dalam Bahasa Indonesia dengan format berikut:
@@ -108,7 +108,7 @@ elif pilihan_menu == "💬 Konsultasi Budidaya & Perawatan":
         else:
             with st.spinner(f"Mengumpulkan data panduan terbaik untuk budidaya {jenis_tanaman}..."):
                 try:
-                    model = genai.GenerativeModel('gemini-2.0-flash')
+                    model = genai.GenerativeModel('gemini-2.0-pro')
                     
                     prompt_konsultasi = f"""
                     Anda adalah Konsultan Pertanian Ahli dan Penyuluh Lapangan Kementerian Pertanian terkemuka.
